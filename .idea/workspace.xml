@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="262b6b81-a45e-43f1-9c5b-a995bb0ca9fa" name="Changes" comment="main">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generation_file.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,24 +49,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test.TestCsvProcessor.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.TestCsvProcessor.test_aggregate_avg.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.TestCsvProcessor.test_aggregate_max.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.TestCsvProcessor.test_aggregate_min.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.TestCsvProcessor.test_apply_filter_equality.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.TestCsvProcessor.test_apply_filter_greater_than.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.TestCsvProcessor.test_apply_filter_less_than.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.TestCsvProcessor.test_empty_aggregation.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.TestCsvProcessor.test_invalid_aggregation.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test.TestCsvProcessor.test_load_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python.generation_file.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test.TestCsvProcessor.executor": "Run",
+    "Python tests.Python tests for test.TestCsvProcessor.test_aggregate_avg.executor": "Run",
+    "Python tests.Python tests for test.TestCsvProcessor.test_aggregate_max.executor": "Run",
+    "Python tests.Python tests for test.TestCsvProcessor.test_aggregate_min.executor": "Run",
+    "Python tests.Python tests for test.TestCsvProcessor.test_apply_filter_equality.executor": "Run",
+    "Python tests.Python tests for test.TestCsvProcessor.test_apply_filter_greater_than.executor": "Run",
+    "Python tests.Python tests for test.TestCsvProcessor.test_apply_filter_less_than.executor": "Run",
+    "Python tests.Python tests for test.TestCsvProcessor.test_empty_aggregation.executor": "Run",
+    "Python tests.Python tests for test.TestCsvProcessor.test_invalid_aggregation.executor": "Run",
+    "Python tests.Python tests for test.TestCsvProcessor.test_load_data.executor": "Run",
+    "Python.generation_file.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Projects/WorkCSV"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\WorkCSV" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python tests.Python tests for test.TestCsvProcessor">
     <configuration name="Python tests for test.TestCsvProcessor" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="WorkCSV" />
@@ -191,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750171422496</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="main">
+      <option name="closed" value="true" />
+      <created>1750172474551</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750172474551</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

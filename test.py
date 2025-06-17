@@ -1,6 +1,6 @@
 import io
 import unittest
-from main import load_data, apply_filter, aggregate_values
+from main import load_data, apply_filter, aggregate_values, order
 
 
 class TestCsvProcessor(unittest.TestCase):
@@ -57,5 +57,6 @@ class TestCsvProcessor(unittest.TestCase):
     def test_empty_aggregation(self):
         with self.assertRaises(ValueError):
             aggregate_values([], "price", "min")
+
 
 

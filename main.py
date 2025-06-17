@@ -49,6 +49,26 @@ def apply_filter(data: list, filter_expr: str) ->list:
 
     return filtered_data
 
+def order(data: list, filter_expr: str) ->list:
+
+    parts = filter_expr.split("=")
+    if len(parts) != 2:
+        raise ValueError("Некорректный формат. Используйте format: column=value")
+    column, expr = parts
+
+    filtered_data = []
+    for row in data:
+        try:
+            current_value = row[column]
+            filtered_data.append(float(current_value))
+        except Exception as exp:
+            raise ValueError(f"Ошибка. Поле {column} не является int или float")
+    if expr == 'asc':
+        filtered_data = sorted(filtered_data, reverse=True)
+    elif expr == 'desc':
+        filtered_data = sorted(filtered_data, reverse=False)
+    return [row for i in filtered_data for row in data if float(row[column]) == i]
+
 
 def aggregate_values(filtered_data: list, column: str, agg_func: str)-> dict:
     values = [float(row[column]) for row in filtered_data]
@@ -70,25 +90,27 @@ def aggregate_values(filtered_data: list, column: str, agg_func: str)-> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Обрабатываем CSV файл")
     parser.add_argument("--file", required=True, help="Путь к файлу CSV")
-    parser.add_argument("--filter", help="Фильтр формата column=<|>|==value")
+    parser.add_argument("--filter", help="Фильтр формата column<оператор>value")
     parser.add_argument('--aggregate', nargs=2, metavar=('field', 'op'),
                         help='Операция агрегации (field op): field - название колонки, '
                              'op - одна из операций: max, min, avg.')
+    parser.add_argument("--order-by",  help="Формат column=value")
 
     args = parser.parse_args()
-    # Загрузка данных
+
     data = load_data(args.file)
 
     # Применяем фильтры, если указаны
     if args.filter:
         data = apply_filter(data, args.filter)
+    if args.order_by:
+        data = order(data, args.order_by)
 
-    # Проводим агрегацию, если указана
+
     aggregated_result = None
     if args.aggregate:
         column_to_aggregate, agg_function = args.aggregate
         aggregated_result = aggregate_values(data, column_to_aggregate, agg_function)
 
-    # Печатаем результат в виде таблицы
     rows = data if not aggregated_result else [aggregated_result]
     print(tabulate(rows, headers='keys'))
