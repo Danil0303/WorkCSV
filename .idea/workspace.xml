@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="262b6b81-a45e-43f1-9c5b-a995bb0ca9fa" name="Changes" comment="main">
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="262b6b81-a45e-43f1-9c5b-a995bb0ca9fa" name="Changes" comment="main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +54,7 @@
     "Python tests.Python tests for test.TestCsvProcessor.test_empty_aggregation.executor": "Run",
     "Python tests.Python tests for test.TestCsvProcessor.test_invalid_aggregation.executor": "Run",
     "Python tests.Python tests for test.TestCsvProcessor.test_load_data.executor": "Run",
+    "Python tests.Python tests for test.TestCsvProcessor.test_order.executor": "Run",
     "Python.generation_file.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -104,21 +98,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test.TestCsvProcessor.test_empty_aggregation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="WorkCSV" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.TestCsvProcessor.test_empty_aggregation&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test.TestCsvProcessor.test_invalid_aggregation" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="WorkCSV" />
       <option name="ENV_FILES" value="" />
@@ -149,13 +128,28 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test.TestCsvProcessor.test_order" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="WorkCSV" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestCsvProcessor.test_order&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for test.TestCsvProcessor" />
+        <item itemvalue="Python tests.Python tests for test.TestCsvProcessor.test_order" />
         <item itemvalue="Python tests.Python tests for test.TestCsvProcessor.test_load_data" />
         <item itemvalue="Python tests.Python tests for test.TestCsvProcessor.test_aggregate_avg" />
         <item itemvalue="Python tests.Python tests for test.TestCsvProcessor.test_invalid_aggregation" />
-        <item itemvalue="Python tests.Python tests for test.TestCsvProcessor.test_empty_aggregation" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +201,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750172474551</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="main">
+      <option name="closed" value="true" />
+      <created>1750176884117</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750176884117</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
