@@ -3,23 +3,16 @@ import csv
 from tabulate import tabulate
 
 
-def load_data(file_path):
+def load_data(file_path: str) -> list:
     """Загружаем данные из CSV."""
     with open(file_path, 'r', newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         return list(reader)
 
 
-def apply_filter(data, filter_expr):
-    """
-    Применяет фильтр к данным согласно заданному выражению.
+def apply_filter(data: list, filter_expr: str) ->list:
 
-    Формат выражения: <column><оператор><value>,
-                     где оператор может быть '=', '>', '<'.
-
-    Например: "price>500", "brand=Acer"
-    """
-    parts = filter_expr.split(None, 1)  # Разделение по первому пробелу, чтобы выделить колонку и выражение вместе
+    parts = filter_expr.split(None, 1)
     if len(parts) != 2:
         raise ValueError("Некорректный формат фильтра. Используйте format: column<оператор>value")
 
@@ -43,14 +36,12 @@ def apply_filter(data, filter_expr):
     filtered_data = []
     for row in data:
         current_value = row[column]
-        # Преобразуем в число, если возможно
         try:
             current_value = float(current_value)
             value = float(value)
         except ValueError:
-            pass  # Оставляем как строку, если преобразовать нельзя
+            pass
 
-        # Логика проверки условия
         if ((operator == '=' and current_value == value) or
             (operator == '>' and current_value > value) or
             (operator == '<' and current_value < value)):
@@ -59,12 +50,7 @@ def apply_filter(data, filter_expr):
     return filtered_data
 
 
-def aggregate_values(filtered_data, column, agg_func):
-
-    """
-    Выполняет агрегацию над столбцом чисел (среднее, минимальное, максимальное).
-    Возможные агрегатные функции: min, max, avg.
-    """
+def aggregate_values(filtered_data: list, column: str, agg_func: str)-> dict:
     values = [float(row[column]) for row in filtered_data]
     if len(values) == 0:
         raise ValueError("Нет данных для агрегирования.")
@@ -104,7 +90,5 @@ if __name__ == "__main__":
         aggregated_result = aggregate_values(data, column_to_aggregate, agg_function)
 
     # Печатаем результат в виде таблицы
-    rows = data
+    rows = data if not aggregated_result else [aggregated_result]
     print(tabulate(rows, headers='keys'))
-    if args.aggregate:
-        print(tabulate([aggregated_result], headers='keys'))
